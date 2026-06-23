@@ -1,0 +1,18 @@
+EU_Policy_Monitor/
+├── data/
+│   ├── policies.db
+│   └── violations.db
+├── src/
+│   ├── __init__.py
+│   ├── policy_fetcher.py
+│   ├── policy_parser.py
+│   ├── violation_detector.py
+│   ├── web_scanner.py
+│   ├── github_scanner.py
+│   └── database.py
+├── models/
+│   ├── violation_model.pkl
+│   └── policy_embeddings.pkl
+├── config.yaml
+├── requirements.txt
+└── README.md
