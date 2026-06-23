@@ -1,0 +1,20 @@
+{
+    'embeddings': {
+        '32016R0679': array([-0.0234, 0.0123, 0.0456, ...]),  # GDPR embedding
+        '32024R1689': array([0.0123, -0.0345, 0.0567, ...]),  # AI Act embedding
+        '32023R2855': array([-0.0456, 0.0234, -0.0123, ...]), # DSA embedding
+        # ... embeddings for all policies
+    },
+    'policies': [
+        {
+            'celex_id': '32016R0679',
+            'title': 'General Data Protection Regulation (GDPR)',
+            'type': 'REG',
+            'embedding': array([...])
+        },
+        # ... all policies
+    ],
+    'model_name': 'all-MiniLM-L6-v2',
+    'created_at': '2024-06-23T10:30:00',
+    'num_policies': 10
+}
