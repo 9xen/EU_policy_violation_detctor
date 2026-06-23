@@ -1,0 +1,47 @@
+# EU Policy Monitor Configuration
+
+# EUR-Lex API Settings
+eurlex:
+  sparql_endpoint: "https://publications.europa.eu/webapi/rdf/sparql"
+  rest_endpoint: "https://eur-lex.europa.eu/legal-content"
+  default_language: "en"
+  max_results: 1000
+
+# Database Settings
+database:
+  type: "sqlite"  # or postgresql, mongodb
+  path: "data/policies.db"
+  connection_string: "sqlite:///data/policies.db"
+
+# Scanning Settings
+scanning:
+  max_depth: 3
+  timeout: 30
+  user_agent: "EU-Policy-Monitor/1.0"
+  respect_robots: true
+
+# GitHub Scanning
+github:
+  rate_limit: 5000
+  max_repos: 1000
+
+# Detection Settings
+detection:
+  similarity_threshold: 0.75
+  batch_size: 50
+  update_interval: 3600  # seconds
+
+# Policy Types to Fetch
+policy_types:
+  - "REG"    # Regulations
+  - "DIR"    # Directives
+  - "DEC"    # Decisions
+  - "RECO"   # Recommendations
+
+# Violation Categories
+violation_categories:
+  - "DATA_PRIVACY"
+  - "SECURITY"
+  - "ACCESSIBILITY"
+  - "CONSUMER_PROTECTION"
+  - "ENVIRONMENTAL"
